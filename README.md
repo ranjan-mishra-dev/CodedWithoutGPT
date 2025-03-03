@@ -1,1 +1,1 @@
-My friend challenge me, code without using any ai tool, in front of him, I build these small but important project that also help to get clear basic concept and working.
+My friend challenge me, code without using any ai tool, in front of him, I build these small but important projects that also help me to get clear my basic concept and working.
