@@ -1,0 +1,11 @@
+1. clearInterval: clearInterval() is used to stop a repeating interval that was set using setInterval().
+
+2. We use clearInterval(countdown); at the start of startCountdown() to prevent multiple intervals from running simultaneously when the user clicks "Start" or "Resume" multiple times.
+
+3. padStart(); The .padStart() method is used to add characters to the beginning of a string until it reaches a specified length.
+        string.padStart(targetLength, padString);
+
+4. outline: none;
+
+
+PROJECT: 2
