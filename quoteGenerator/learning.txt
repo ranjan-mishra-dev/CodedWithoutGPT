@@ -1,0 +1,5 @@
+1. let randomInt = Math.floor(Math.random() * 11);
+console.log(randomInt); // Outputs an integer between 0 and 10
+
+2. Generate a Random Integer Between min and max
+randomInt=Math.floor(Math.random() * (max - min + 1)) + min;
