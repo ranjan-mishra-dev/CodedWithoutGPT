@@ -51,14 +51,12 @@ h1 {
     justify-content: center;
     margin-auto: 0px;
     padding: 10px;
-
-
-        color: red;
-        font-size: 18px;
-        font-weight: bold;
-        text-align: center;
-        background-color: #f4f4f4;
-        padding: 10px;
-        border-radius: 5px;
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
     
 }
