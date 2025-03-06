@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="container">
+        <div class="display" id="display">0</div>
+        <div class="input">
+            <div class="item" id="1" onclick="appendToDisplay('1')">1</div>
+            <div class="item" id="2" onclick="appendToDisplay('2')">2</div>
+            <div class="item" id="3" onclick="appendToDisplay('3')">3</div>
+            <div class="item" id="+" onclick="appendToDisplay('+')">+</div>
+            <div class="item" id="4" onclick="appendToDisplay('4')">4</div>
+            <div class="item" id="5" onclick="appendToDisplay('5')">5</div>
+            <div class="item" id="6" onclick="appendToDisplay('6')">6</div>
+            <div class="item" id="-" onclick="appendToDisplay('-')">-</div>
+            <div class="item" id="7" onclick="appendToDisplay('7')">7</div>
+            <div class="item" id="8" onclick="appendToDisplay('8')">8</div>
+            <div class="item" id="9" onclick="appendToDisplay('9')">9</div>
+            <div class="item" id="*" onclick="appendToDisplay('*')">*</div>
+            <div class="item" id="0" onclick="appendToDisplay('0')">0</div>
+            <div class="item equal" onclick="clearDisplay()">C</div>
+            <div class="item equal" id="=" onclick="calculateResult()">=</div> <!-- Equal sign button -->
+            <div class="item" id="/" onclick="appendToDisplay('/')">/</div>
+        </div>
+        
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

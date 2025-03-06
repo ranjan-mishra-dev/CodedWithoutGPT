@@ -1,0 +1,93 @@
+copied: without eval() function
+
+let display = document.getElementById("display");
+let currentInput = ""; // Stores the current number
+let expression = []; // Stores the full expression as an array
+
+// Function to append numbers and operators
+function appendToDisplay(value) {
+    if (!isNaN(value) || value === ".") {
+        // If number or decimal, append to current input
+        currentInput += value;
+        display.innerText = currentInput;
+    } else {
+        // If operator, push currentInput to expression, then push operator
+        if (currentInput !== "") {
+            expression.push(currentInput);
+            currentInput = ""; // Reset input for next number
+        }
+        if (expression.length > 0) {
+            expression.push(value);
+        }
+        display.innerText = expression.join(" ");
+    }
+}
+
+// Function to calculate the result
+function calculateResult() {
+    if (currentInput !== "") {
+        expression.push(currentInput);
+        currentInput = "";
+    }
+
+    let result = evaluateExpression(expression);
+    display.innerText = result;
+    expression = [result.toString()]; // Store result for further calculations
+}
+
+// Function to evaluate an expression manually
+function evaluateExpression(exp) {
+    let numbers = [];
+    let operators = [];
+
+    // Precedence order: * and / first, then + and -
+    let precedence = { "+": 1, "-": 1, "*": 2, "/": 2 };
+
+    for (let i = 0; i < exp.length; i++) {
+        let token = exp[i];
+
+        if (!isNaN(token)) {
+            numbers.push(parseFloat(token)); // Convert to number
+        } else {
+            // Process previous high-priority operators (* and /)
+            while (
+                operators.length > 0 &&
+                precedence[operators[operators.length - 1]] >= precedence[token]
+            ) {
+                let operator = operators.pop();
+                let num2 = numbers.pop();
+                let num1 = numbers.pop();
+                numbers.push(applyOperation(num1, num2, operator));
+            }
+            operators.push(token);
+        }
+    }
+
+    // Process remaining operators
+    while (operators.length > 0) {
+        let operator = operators.pop();
+        let num2 = numbers.pop();
+        let num1 = numbers.pop();
+        numbers.push(applyOperation(num1, num2, operator));
+    }
+
+    return numbers[0];
+}
+
+// Function to apply a mathematical operation
+function applyOperation(num1, num2, operator) {
+    switch (operator) {
+        case "+": return num1 + num2;
+        case "-": return num1 - num2;
+        case "*": return num1 * num2;
+        case "/": return num2 !== 0 ? num1 / num2 : "Error"; // Handle divide by zero
+        default: return 0;
+    }
+}
+
+// Function to clear the display
+function clearDisplay() {
+    display.innerText = "0";
+    currentInput = "";
+    expression = [];
+}
