@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=bolt"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=bolt"
+    />
+  </head>
+  <body>
+    <div id="container">
+
+      <h1>Today's Weather</h1>
+      <div id="userInput">
+        <label for="location">Location</label>
+        <input
+          type="text"
+          placeholder="e.g. Mumbai"
+          id="location"
+          class="location"
+        />
+        <button id="fetch">
+          <span class="material-symbols-outlined"> bolt </span>
+        </button>
+      </div>
+
+      <div id="display">
+        <p id="locatName" class="bottom"></p>
+        <div id="display1">
+          <div>
+            <p class="top" id="temp">Temp.</p>
+            <h1 class="bottom" id="tempData"></h1>
+          </div>
+          <div>
+            <p class="top" id="humidity">Humidity</p>
+            <h1 class="bottom" id="humidityData"></h1>
+          </div>
+        </div>
+        <div id="display2">
+          <div>
+            <p class="top" id="feel">Feel's like</p>
+            <h3 class="bottom" id="feelData"></h3>
+          </div>
+          <div>
+            <p class="top" id="desc">Desc.</p>
+            <h3 class="bottom" id="descData"></h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
