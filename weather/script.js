@@ -15,7 +15,7 @@ fetch1.addEventListener("click", async () => {
 
   if (lat !== undefined && lon !== undefined) {
     // Ensure lat/lon exist
-    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=00ff0f2de262c5ceb59224e9826f80e2&units=imperial`;
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=[your_api_key]&units=imperial`;
     console.log("Fetching Weather Data:", weatherUrl);
 
     await getWeatherData(weatherUrl);
