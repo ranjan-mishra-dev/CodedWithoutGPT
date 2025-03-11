@@ -91,3 +91,18 @@ function clearDisplay() {
     currentInput = "";
     expression = [];
 }
+
+
+----------------
+
+
+let expression = []
+
+expression.push(1);
+expression.push(2);
+expression.push(3);
+
+console.log(expression) // output: [1, 2, 3]
+
+expression = [4]  IT OVERWRITE THE WHOLE ARRAY BY 4
+console.log(expression) //output; [4]

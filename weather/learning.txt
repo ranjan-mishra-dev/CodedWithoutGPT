@@ -1,0 +1,2 @@
+${userLocation} dynamically inserts the user's location into the URL.
+encodeURIComponent(userLocation) ensures that special characters (like spaces) are properly encoded (e.g., "New York" → "New%20York").

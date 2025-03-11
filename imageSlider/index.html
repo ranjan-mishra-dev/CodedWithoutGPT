@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        .slider-container {
+            width: 400px;
+            height: 250px;
+            overflow: hidden;
+            text-align: center;
+        }
+        #container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            flex-direction: column;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .btn {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: white;
+            
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+<div class="slider-container">
+    <img id="slider" src="" alt="Image Slider">
+</div>
+
+<div class="buttons">
+    <button class="btn" onclick="previousSlide()">Back</button>
+    <button class="btn" onclick="nextSlide()">Next</button>
+</div>
+</div>
+<script>
+    // Image Array
+    const images = ["https://images.unsplash.com/photo-1635488640163-e5f6782cda6e?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGdpcmx8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1631947430066-48c30d57b943?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z2lybHxlbnwwfHwwfHx8MA%3D%3D",
+    "https://images.unsplash.com/photo-1628015081036-0747ec8f077a?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lybHxlbnwwfHwwfHx8MA%3D%3D",
+    "https://images.unsplash.com/photo-1606814893907-c2e42943c91f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Z2lybHxlbnwwfHwwfHx8MA%3D%3D",
+    "https://images.unsplash.com/photo-1467307983825-619715426c70?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGdpcmx8ZW58MHx8MHx8fDA%3D"
+];
+
+
+    let currentIndex = 0; // Track the current image index
+    const slider = document.getElementById("slider");
+
+    // Function to update the image source
+    function updateSlider() {
+        slider.src = images[currentIndex];
+    }
+
+    // Back Button Logic
+    function previousSlide() {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = images.length - 1; // Loop back to last image
+        }
+        updateSlider();
+    }
+
+    // Next Button Logic
+    function nextSlide() {
+        currentIndex++;
+        if (currentIndex >= images.length) {
+            currentIndex = 0; // Loop back to first image
+        }
+        updateSlider();
+    }
+
+    // Initialize with first image
+    updateSlider();
+</script>
+
+</body>
+</html>
