@@ -1,0 +1,14 @@
+height: 100vh; means that the element will take up 100% of the viewport height.
+
+vh stands for viewport height.
+100vh means 100% of the screen height, regardless of the device or screen size.
+
+
+rem stands for "root element", which is relative to the root <html> font size.
+By default, browsers set the root font size to 16px.
+3rem means 3 × 16px = 48px.
+
+
+const now = new Date();
+const formattedTime = now.toLocaleTimeString();
+console.log(formattedTime); // Example output: "6:30:15 PM" (depends on locale)
