@@ -1,0 +1,12 @@
+1. in function assignment why use const: const handleGuess = function () {} ensures that handleGuess cannot be reassigned to another function later.
+This is good because we don’t want handleGuess to be accidentally modified elsewhere in the code.
+
+2. how to 2.32 -> 2 by using Math.floor()
+
+3. number.toFixed(2); // "3.14" (string)
+
+4. we mulitply by 101 because 101 is exclusive
+
+5. isNaN means check a input is number or not if not then return true
+
+6. 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <h1>Tip Calculator 📠</h1>
+        <div id="input">
+            <label for="billAmount">Total Amount: </label>
+            <input type="number" name="billAmount" id="billAmount" placeholder="e.g. Rs. 429.20">
+            <label for="tipPercentage">Tip in percentage: </label>
+            <input type="number" name="tipPercentage" id="tipPercentage" placeholder="e.g. 5">
+            <button id="calculate">Calculate</button>
+        </div>
+
+        <hr id="divider">
+
+        <div id="display">
+            <div class="amount-container">
+                <p>Total Amount:</p>
+                <h2 id="amount">Rs. 3223</h2>
+            </div>
+            <div class="amount-container">
+               <p>Tip Amount:</p>
+               <h2 id="tipCost">Rs. 34</h2>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- input : total bill and tip percentage
+     Submit buttton
+     Display: Total Bill have to pay and cost of tip -->

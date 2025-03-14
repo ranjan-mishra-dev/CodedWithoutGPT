@@ -36,7 +36,7 @@
 
 #userInput label {
     display: flex;
-    align-self: flex-start; /* Moves the label to the left */
+    align-self: flex-start; 
     margin-left: 50px;
     margin-bottom: 10px;
 }

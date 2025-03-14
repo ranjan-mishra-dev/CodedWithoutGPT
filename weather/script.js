@@ -28,6 +28,7 @@ fetch1.addEventListener("click", async () => {
   } else {
     console.error("Location not found or invalid!");
   }
+
   document.getElementById("display").style.display = "block";
 
   let locationName = document.getElementById("locatName");
